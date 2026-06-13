@@ -1,0 +1,16 @@
+# DigitalOcean App Platform — static site spec for the GM recruitment page.
+# It's plain HTML + images, so there's no build step.
+#
+# Use it either way:
+#   • UI: DO → Apps → Create App → pick this GitHub repo; DO reads this spec.
+#   • CLI: doctl apps create --spec .do/app.yaml   (then `doctl apps list`)
+name: mad-monkey-gm
+static_sites:
+  - name: web
+    github:
+      repo: kylejpkenny/mad-monkey-gm
+      branch: main
+      deploy_on_push: true      # auto-redeploy on every push to main
+    source_dir: /               # index.html + photos/ live at the repo root
+    index_document: index.html
+    error_document: index.html
