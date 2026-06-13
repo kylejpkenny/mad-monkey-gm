@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mad Monkey — GM Recruitment · Q4 Intake</title>
+<meta name="description" content="It's better here. We're hiring General Managers to run the best hostels and bars in Southeast Asia. Q4 intake — roles open now.">
+<meta property="og:title" content="It's better here. — Mad Monkey GM Recruitment">
+<meta property="og:description" content="We hire on how you lead, not your job title. Q4 intake — roles open now.">
+<meta property="og:image" content="photos/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Bungee&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0081f7; --yellow:#ffc000; --lime:#ccff01; --cyan:#00fef3;
+  --orange:#ff6600; --green:#03ff01; --purple:#ab00ff; --pink:#ff01aa;
+  --black:#0a0a0a; --bone:#f5efe2; --paper:#ffffff;
+  --sh: 8px 8px 0 0 var(--black);
+  --sh-sm: 5px 5px 0 0 var(--black);
+  --bar-h: 76px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Montserrat',system-ui,sans-serif;
+  background:var(--bone); color:var(--black);
+  line-height:1.5; overflow-x:hidden; padding-bottom:var(--bar-h);
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--lime);color:var(--black)}
+mark.todo,.todo{background:var(--lime);color:#0a0a0a;padding:0 .18em;font-style:normal;font-weight:inherit}
+
+/* ---- type ---- */
+.display{font-weight:900;text-transform:uppercase;line-height:.92;letter-spacing:-.02em}
+h1.display{font-size:clamp(2.9rem,12vw,8.5rem)}
+h2.display{font-size:clamp(2rem,6.2vw,4.6rem)}
+.kicker{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:clamp(.85rem,2.4vw,1.05rem)}
+.lead{font-size:clamp(1.05rem,2.6vw,1.4rem);font-weight:500;max-width:40ch}
+p{max-width:62ch}
+
+/* ---- layout ---- */
+section{padding:clamp(64px,11vw,140px) clamp(22px,6vw,90px);position:relative}
+.wrap{max-width:1180px;margin:0 auto;width:100%}
+.bg-black{background:var(--black);color:var(--bone)}
+.bg-bone{background:var(--bone);color:var(--black)}
+.bg-purple{background:var(--purple);color:var(--black)}
+.bg-pink{background:var(--pink);color:var(--black)}
+
+/* ---- buttons (sharp, hard shadow, never the default 8-12px radius) ---- */
+.btn{
+  display:inline-flex;align-items:center;gap:.6ch;
+  font-family:inherit;font-weight:900;text-transform:uppercase;letter-spacing:.02em;
+  font-size:clamp(1rem,2.3vw,1.25rem);
+  padding:.85em 1.5em;border:4px solid var(--black);background:var(--lime);color:var(--black);
+  border-radius:0;cursor:pointer;text-decoration:none;box-shadow:var(--sh);
+  transition:transform .08s ease, box-shadow .08s ease;
+}
+.btn:hover{transform:translate(4px,4px);box-shadow:4px 4px 0 0 var(--black)}
+.btn:active{transform:translate(8px,8px);box-shadow:0 0 0 0 var(--black)}
+.btn--pink{background:var(--pink)}
+.btn--cyan{background:var(--cyan)}
+.btn--yellow{background:var(--yellow)}
+.btn--ghost{background:transparent;color:var(--bone);border-color:var(--bone);box-shadow:6px 6px 0 0 var(--lime)}
+.btn--ghost:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 0 var(--lime)}
+.btn--lg{font-size:clamp(1.1rem,3vw,1.7rem);padding:.9em 1.7em}
+.textlink{font-weight:700;text-decoration:none;border-bottom:3px solid currentColor;padding-bottom:2px}
+.textlink:hover{background:var(--lime);color:var(--black)}
+
+/* ---- brand devices ---- */
+.pill{display:inline-block;border:4px solid var(--black);border-radius:999px;
+  padding:.45em 1.1em;font-weight:800;text-transform:uppercase;letter-spacing:.04em;
+  background:var(--bone);color:var(--black);box-shadow:var(--sh-sm)}
+.sticker{font-family:'Bungee',cursive;display:grid;place-items:center;text-align:center;
+  width:128px;height:128px;border-radius:999px;border:5px solid var(--black);
+  background:var(--lime);color:var(--black);box-shadow:var(--sh);
+  font-size:1.15rem;line-height:1;transform:rotate(-11deg)}
+.sticker small{font-size:.62rem;font-family:'Montserrat';font-weight:800;letter-spacing:.1em}
+.burst{position:absolute;aspect-ratio:1;background:var(--pink);
+  clip-path:polygon(50% 0%,57.65% 31.52%,85.36% 14.64%,68.48% 42.35%,100% 50%,68.48% 57.65%,85.36% 85.36%,57.65% 68.48%,50% 100%,42.35% 68.48%,14.64% 85.36%,31.52% 57.65%,0% 50%,31.52% 42.35%,14.64% 14.64%,42.35% 31.52%);
+  display:grid;place-items:center;z-index:0}
+.speech{position:relative;display:inline-block;background:var(--yellow);color:var(--black);
+  border:5px solid var(--black);border-radius:28px;padding:clamp(22px,4vw,40px);box-shadow:var(--sh)}
+.speech::after{content:"";position:absolute;left:48px;bottom:-26px;width:0;height:0;
+  border:22px solid transparent;border-top-color:var(--black);border-bottom:0}
+.speech::before{content:"";position:absolute;left:52px;bottom:-15px;width:0;height:0;z-index:1;
+  border:16px solid transparent;border-top-color:var(--yellow);border-bottom:0}
+
+/* ---- photo frames + missing-file fallback ---- */
+.photo{position:relative;border:5px solid var(--black);overflow:hidden;background:var(--black)}
+.photo img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1;
+  filter:saturate(1.16) contrast(1.07) brightness(.98)}
+.photo img.is-missing{display:none}
+.photo-fallback{position:absolute;inset:0;z-index:0;display:grid;place-content:center;gap:8px;text-align:center;
+  background:repeating-linear-gradient(45deg,var(--black) 0 22px,#161616 22px 44px);color:var(--bone);padding:18px}
+.photo-fallback b{font-family:'Bungee',cursive;font-size:1rem;color:var(--lime);letter-spacing:.05em}
+.photo-fallback code{font-size:.8rem;opacity:.85;font-weight:600}
+.frame{box-shadow:12px 12px 0 0 var(--cyan);transform:rotate(-2deg)}
+.frame--pink{box-shadow:12px 12px 0 0 var(--pink)}
+.frame--lime{box-shadow:12px 12px 0 0 var(--lime)}
+
+/* ---- wordmark ---- */
+.wordmark{font-weight:900;text-transform:uppercase;line-height:.82;letter-spacing:-.01em;
+  font-size:18px;display:inline-block}
+.wordmark .mk{display:block}
+.wordmark--bone{color:var(--bone)}
+.wordmark--black{color:var(--black)}
+.logo{display:block;width:auto;height:auto}
+.logo--nav{height:48px}
+.logo--foot{width:min(360px,70vw)}
+.sticky .logo{height:36px}
+@media(max-width:560px){.logo--nav{height:40px}}
+
+/* ---- nav ---- */
+.nav{position:absolute;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;
+  justify-content:space-between;padding:22px clamp(22px,6vw,90px)}
+.nav .pill{background:var(--lime)}
+
+/* ---- hero ---- */
+.hero{min-height:100svh;display:flex;align-items:flex-end;color:var(--bone);
+  background:var(--black);overflow:hidden;padding-bottom:clamp(70px,10vw,120px)}
+.hero-bg{position:absolute;inset:0;z-index:0;border:0}
+.hero-bg .photo-fallback{background:repeating-linear-gradient(45deg,#0a0a0a 0 30px,#141414 30px 60px)}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:rgba(10,10,10,.58)}
+.hero-scrim::after{content:"";position:absolute;left:0;right:0;bottom:0;height:55%;background:rgba(10,10,10,.5)}
+.hero .wrap{position:relative;z-index:2}
+.hero .kicker{color:var(--lime)}
+.hero h1{margin:.18em 0 .35em}
+.hero .lead{color:var(--bone);opacity:.95}
+.hero-cta{display:flex;flex-wrap:wrap;gap:18px 26px;align-items:center;margin-top:34px}
+.hero .sticker{position:absolute;top:11vh;right:clamp(18px,5vw,80px);z-index:2}
+.hero-rotator{color:var(--lime);font-weight:900}
+
+/* ---- positioning ---- */
+.split{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,64px);align-items:center}
+.posi .photo{aspect-ratio:4/5}
+.posi h2{margin-bottom:.4em}
+.posi .blue{color:var(--blue)}
+
+/* ---- proof ---- */
+.proof .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,5vw,60px);align-items:center}
+.proof .photo{aspect-ratio:1}
+.proof .speech-q{font-size:clamp(1.4rem,3.4vw,2.2rem);font-weight:800;line-height:1.18}
+.proof .attr{margin-top:18px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--black)}
+.trust{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.trust .pill{background:var(--bone);font-size:.95rem}
+.trust .pill b{color:var(--black)}
+
+/* ---- qualifier ---- */
+.qual ul{list-style:none;display:grid;gap:18px;margin:34px 0;max-width:760px}
+.qual li{display:flex;gap:16px;align-items:flex-start;font-size:clamp(1.05rem,2.6vw,1.35rem);font-weight:600}
+.qual li .tick{flex:0 0 auto;width:34px;height:34px;background:var(--black);color:var(--lime);
+  display:grid;place-items:center;font-weight:900;border-radius:0;box-shadow:3px 3px 0 0 rgba(0,0,0,.25)}
+.qual .punch{font-weight:800;font-size:clamp(1.15rem,3vw,1.7rem);max-width:30ch;
+  border-top:5px solid var(--black);padding-top:24px}
+
+/* ---- who ---- */
+.who .cyan{color:var(--cyan)}
+.who h2{margin-bottom:.4em}
+.who p{font-size:clamp(1.1rem,2.7vw,1.5rem);font-weight:500;max-width:54ch}
+.who .wrap.split{align-items:center}
+.who-media{position:relative}
+.who-media .frame{aspect-ratio:4/5}
+.who-media .cutout{position:absolute;left:-16px;bottom:-26px;width:48%;aspect-ratio:1;
+  border:5px solid var(--bone);box-shadow:8px 8px 0 0 var(--pink);transform:rotate(-6deg);z-index:3}
+.who-media .cutout .photo-fallback b{color:var(--pink)}
+@media(max-width:860px){.who-media .cutout{width:44%;left:-8px;bottom:-16px}}
+
+/* ---- why (cards) ---- */
+.why h2{margin-bottom:.7em}
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.card{background:var(--paper);border:5px solid var(--black);box-shadow:var(--sh);padding:30px 26px;
+  display:flex;flex-direction:column;gap:14px}
+.card h3{font-weight:900;text-transform:uppercase;font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1}
+.card .num{font-family:'Bungee',cursive;font-size:clamp(2rem,4vw,2.8rem);color:var(--orange);line-height:1}
+.card p{font-weight:500;font-size:1.02rem}
+.card:nth-child(2) .num{color:var(--blue)}
+.card:nth-child(3) .num{color:var(--pink)}
+.why-band{margin-top:46px;aspect-ratio:16/6;box-shadow:12px 12px 0 0 var(--blue);transform:rotate(1deg)}
+@media(max-width:860px){.why-band{aspect-ratio:4/3;margin-top:34px}}
+
+/* ---- honest / FAQ ---- */
+.honest .lime{color:var(--lime)}
+.faq{display:grid;gap:16px;margin-top:36px;max-width:860px}
+details{border:4px solid var(--bone);background:transparent;color:var(--bone);padding:0}
+details[open]{border-color:var(--lime)}
+summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:800;text-transform:uppercase;
+  letter-spacing:.02em;font-size:clamp(1rem,2.4vw,1.25rem);display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary .plus{font-family:'Bungee',cursive;color:var(--lime);transition:transform .2s}
+details[open] summary .plus{transform:rotate(45deg)}
+details .ans{padding:0 22px 22px;font-weight:500;color:var(--bone);opacity:.92;max-width:60ch}
+
+/* ---- close ---- */
+.close{background:var(--lime);color:var(--black);text-align:left}
+.close h2{font-size:clamp(2.2rem,7vw,5.4rem);max-width:18ch}
+.close .kicker{margin-top:26px}
+.close .btn{background:var(--black);color:var(--lime);border-color:var(--black);box-shadow:8px 8px 0 0 var(--pink)}
+.close .btn:hover{transform:translate(4px,4px);box-shadow:4px 4px 0 0 var(--pink)}
+.close .mailrow{margin-top:26px;font-weight:600}
+.close .burst{width:160px;top:-40px;right:8vw;background:var(--pink);color:var(--black)}
+.close .burst span{font-family:'Bungee',cursive;font-size:.8rem;transform:rotate(8deg);text-align:center;line-height:1}
+
+/* ---- footer ---- */
+.foot{background:var(--black);color:var(--bone);padding:clamp(50px,8vw,90px) clamp(22px,6vw,90px)}
+.foot .big{font-weight:900;text-transform:uppercase;line-height:.82;letter-spacing:-.02em;
+  font-size:clamp(3rem,13vw,9rem);color:var(--bone)}
+.foot .row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:20px;margin-top:18px}
+.foot .all-in{font-family:'Bungee',cursive;color:var(--lime)}
+
+/* ---- sticky apply bar (carries the always-on bottom-right wordmark) ---- */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--black);
+  border-top:4px solid var(--lime);display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px clamp(16px,5vw,40px);height:var(--bar-h);
+  transform:translateY(120%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.sticky.show{transform:none}
+.sticky .left{display:flex;align-items:center;gap:16px;min-width:0}
+.sticky .label{color:var(--bone);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem}
+.sticky .label b{color:var(--lime)}
+.sticky .btn{padding:.6em 1.2em;font-size:1rem;box-shadow:5px 5px 0 0 var(--pink)}
+.sticky .btn:hover{box-shadow:2px 2px 0 0 var(--pink)}
+.sticky .brand{display:flex;align-items:center}
+@media(max-width:560px){.sticky .label{display:none}}
+body.modal-open .sticky{display:none}
+
+/* ---- modal / application form ---- */
+.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;
+  padding:20px;background:rgba(10,10,10,.78)}
+.modal.open{display:flex}
+.sheet{background:var(--black);color:var(--bone);border:5px solid var(--lime);box-shadow:var(--sh);
+  width:min(560px,100%);max-height:92svh;overflow:auto;padding:clamp(26px,5vw,42px);position:relative}
+.sheet h2{font-size:clamp(1.7rem,5vw,2.6rem)}
+.sheet .kicker{color:var(--lime);margin-bottom:6px}
+.sheet .sub{font-weight:500;opacity:.9;margin:10px 0 26px;max-width:46ch}
+.x{position:absolute;top:14px;right:14px;width:42px;height:42px;border:3px solid var(--bone);
+  background:transparent;color:var(--bone);font-weight:900;font-size:1.2rem;cursor:pointer;line-height:1}
+.x:hover{background:var(--pink);color:var(--black);border-color:var(--black)}
+.field{margin-bottom:20px}
+.field label{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.85rem;margin-bottom:8px}
+.field input[type=text],.field input[type=email]{width:100%;font-family:inherit;font-size:1.05rem;font-weight:600;
+  padding:14px 16px;border:4px solid var(--bone);background:var(--black);color:var(--bone);border-radius:0}
+.field input:focus{outline:none;border-color:var(--lime);box-shadow:5px 5px 0 0 var(--lime)}
+.file{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.file-btn{font-weight:900;text-transform:uppercase;border:4px solid var(--bone);background:var(--cyan);color:var(--black);
+  padding:12px 18px;cursor:pointer;box-shadow:5px 5px 0 0 var(--bone)}
+.file-btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 0 var(--bone)}
+.file-name{font-weight:600;opacity:.85;font-size:.92rem}
+.err{color:var(--pink);font-weight:700;font-size:.85rem;margin-top:8px;display:none}
+.err.show{display:block}
+.formbanner{display:none;border:4px solid var(--pink);color:var(--bone);padding:14px 16px;margin-bottom:20px;font-weight:600;background:rgba(255,1,170,.12)}
+.formbanner.show{display:block}
+.formbanner a{color:var(--lime);font-weight:800}
+.submit{width:100%;justify-content:center;margin-top:6px}
+.submit[disabled]{opacity:.7;cursor:wait}
+.micro{font-size:.8rem;opacity:.7;margin-top:14px;font-weight:500}
+.alt{margin-top:18px;text-align:center;font-weight:600}
+.alt a{color:var(--lime)}
+
+/* success state */
+.success{display:none;text-align:center}
+.success.show{display:block}
+.success .sticker{margin:0 auto 22px;width:150px;height:150px;font-size:1.5rem;background:var(--lime);transform:rotate(-6deg)}
+.success h2{margin-bottom:14px}
+.success p{margin:0 auto;font-weight:500}
+
+/* ---- reveal ---- */
+.reveal{opacity:0;transform:translateY(30px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+
+/* ---- responsive ---- */
+@media(max-width:860px){
+  .split,.proof .wrap{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .hero .sticker{width:92px;height:92px;font-size:.85rem;top:96px;bottom:auto;right:14px}
+  .nav{padding:16px 22px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+  .btn,.sticky{transition:none}
+  *{animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <img class="logo logo--nav" src="photos/logo-black.png" decoding="async" alt="Mad Monkey">
+  <span class="pill" data-cfg-prefix="intake" data-cfg-suffix=" INTAKE">Q4 INTAKE</span>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg photo">
+    <div class="photo-fallback"><b>DROP PHOTO</b><code>photos/hero.jpg</code><span style="font-size:.72rem;opacity:.7">GM in a real property · person in frame</span></div>
+    <img src="photos/hero.jpg" fetchpriority="high" alt="A Mad Monkey General Manager on location at their property" onerror="this.classList.add('is-missing')">
+  </div>
+  <div class="hero-scrim"></div>
+  <div class="wrap">
+    <p class="kicker"><span data-cfg-prefix="intake" data-cfg-suffix=" intake">Q4 intake</span> — roles open.</p>
+    <h1 class="display">It's better<br>here.</h1>
+    <p class="lead">Remember your first backpacking trip? Maybe a solo traveller in <span class="hero-rotator" id="rotator">Asia</span>. A euro trip. A whole gap year. Those memories are priceless — and it's what drives us.</p>
+    <div class="hero-cta">
+      <button class="btn btn--lg" data-open-apply>Apply now →</button>
+    </div>
+  </div>
+</header>
+
+<!-- POSITIONING -->
+<section class="posi bg-bone reveal" id="positioning">
+  <div class="wrap split">
+    <div>
+      <h2 class="display">We're looking for hospitality leaders to run the <span class="blue">best hostels and bars</span> in Southeast Asia.</h2>
+      <p class="lead">The kind of person who can hold a room, lead a team, and make a stranger's night the best of their trip.</p>
+    </div>
+    <div class="photo frame frame--pink">
+      <div class="photo-fallback"><b>DROP PHOTO</b><code>photos/positioning.jpg</code><span style="font-size:.72rem;opacity:.7">beach / property / night-out</span></div>
+      <img loading="lazy" decoding="async" src="photos/positioning.jpg" alt="Mad Monkey property and night-out energy" onerror="this.classList.add('is-missing')">
+    </div>
+  </div>
+</section>
+
+<!-- QUALIFIER -->
+<section class="qual bg-purple reveal" id="qualifier">
+  <div class="wrap">
+    <h2 class="display">Does this sound like you?</h2>
+    <ul>
+      <li><span class="tick">✓</span> You take what you do seriously but have fun while doing it.</li>
+      <li><span class="tick">✓</span> You lead by example and empower your team to perform without micromanaging.</li>
+      <li><span class="tick">✓</span> You make every day your guests' best day.</li>
+      <li><span class="tick">✓</span> You always bring your personality to work.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="who bg-black reveal" id="who">
+  <div class="wrap split">
+    <div>
+      <h2 class="display"><span class="cyan">Mad</span> Monkey</h2>
+      <p>Mad Monkey is a disruptive platform for youth travel. In a fragmented world we combine the speed of technology with the experience of real worldwide communities. We make youth travel easier to discover, easier to afford, easier to join — and impossible to experience alone.</p>
+    </div>
+    <div class="who-media">
+      <div class="photo frame frame--lime">
+        <div class="photo-fallback"><b>DROP PHOTO</b><code>photos/whoweare.jpg</code></div>
+        <img loading="lazy" decoding="async" src="photos/whoweare.jpg" alt="A Mad Monkey property at sunset" onerror="this.classList.add('is-missing')">
+      </div>
+      <div class="photo cutout">
+        <div class="photo-fallback"><b>DROP PHOTO</b><code>photos/memories.jpg</code></div>
+        <img loading="lazy" decoding="async" src="photos/memories.jpg" alt="Polaroids from Mad Monkey nights" onerror="this.classList.add('is-missing')">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY IT'S BETTER HERE -->
+<section class="why bg-bone reveal" id="why">
+  <div class="wrap">
+    <h2 class="display">Why it's better here</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="num"><span data-cfg="propertyCount">24</span>+</span>
+        <h3>A real ladder</h3>
+        <p><b data-cfg="propertyCount">24</b>+ locations across <b data-cfg="countryCount">7</b> countries.</p>
+      </div>
+      <div class="card">
+        <span class="num">800+</span>
+        <h3>A team that means it</h3>
+        <p>Every one of our 800+ team members is dedicated to our CSR and giving-back initiatives — creating positive, lasting impact in every community we call home.</p>
+      </div>
+    </div>
+    <div class="why-band photo frame">
+      <div class="photo-fallback"><b>DROP PHOTO</b><code>photos/why.jpg</code></div>
+      <img loading="lazy" decoding="async" src="photos/why.jpg" alt="The Mad Monkey crew out together" onerror="this.classList.add('is-missing')">
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <img class="logo logo--foot" src="photos/logo-black.png" loading="lazy" decoding="async" alt="Mad Monkey">
+    <div class="row">
+      <span class="all-in" style="font-size:1.3rem">ALL IN.</span>
+      <span style="opacity:.6;font-weight:600;font-size:.85rem">© <span id="yr"></span> Mad Monkey Hostels · GM Recruitment</span>
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY APPLY BAR (bottom-right wordmark lives here, always on) -->
+<div class="sticky" id="stickyBar">
+  <div class="left">
+    <button class="btn" data-open-apply>Apply for Q4 →</button>
+    <span class="label"><b>Q4 intake</b> — roles open now</span>
+  </div>
+</div>
+
+<!-- APPLICATION MODAL -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet">
+    <button class="x" id="closeModal" aria-label="Close">✕</button>
+
+    <div id="formView">
+      <p class="kicker" data-cfg-prefix="intake" data-cfg-suffix=" intake · GM">Q4 intake · GM</p>
+      <h2 class="display" id="mTitle">Raise your hand</h2>
+      <p class="sub">Three things and you're in the running. We hire on how you lead — the CV just helps us say hi.</p>
+
+      <div class="formbanner" id="banner"></div>
+
+      <form id="applyForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+          <span class="err" id="errName">Tell us your name.</span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="err" id="errEmail">We need a valid email to reach you.</span>
+        </div>
+        <div class="field">
+          <label for="cv">Your CV</label>
+          <div class="file">
+            <label class="file-btn" for="cv">Choose file</label>
+            <span class="file-name" id="cvName">No file yet — PDF or Word, max 10MB</span>
+          </div>
+          <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" hidden>
+          <span class="err" id="errCv">Add a CV (PDF or Word, under 10MB).</span>
+        </div>
+        <button type="submit" class="btn submit btn--lg" id="submitBtn">Send it →</button>
+        <p class="micro">By applying you agree we can contact you about roles at Mad Monkey. We never share your details.</p>
+        <p class="alt" id="waAlt" style="display:none">or <a id="waLink" href="#" target="_blank" rel="noopener">apply on WhatsApp →</a></p>
+      </form>
+    </div>
+
+    <div class="success" id="successView">
+      <div class="sticker">YOU'RE<br>IN</div>
+      <h2 class="display">Got it.</h2>
+      <p>We've got your application. Someone from the team will email you in the next few days — keep an eye on your inbox (and spam, just in case). Welcome to the start of something.</p>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+/* ============================================================
+   CONFIG — fill every [bracket] with final figures before launch.
+   Anything still containing "[" is auto-highlighted lime on the page.
+   ============================================================ */
+const CONFIG = {
+  // Supabase (reuses the shared Mad Monkey project; publishable key is safe in client)
+  supabaseUrl:     "https://ksvzfkqmljqojwzauaim.supabase.co",
+  supabaseAnonKey: "sb_publishable_R0p5YyjVg4-NCRhOMjFLvg_IeiKR07C",
+
+  whatsapp:   "",            // e.g. "+639171234567" → shows a WhatsApp apply option. Leave "" to hide.
+
+  intake: "Q4",
+  propertyCount: "24",
+  countryCount: "7",
+};
+
+/* ---- inject CONFIG into the page + flag unfilled [brackets] ---- */
+const dig = (o,p)=>p.split('.').reduce((a,k)=>a&&a[k],o);
+const esc = s => String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+document.querySelectorAll('[data-cfg]').forEach(el=>{
+  const v = dig(CONFIG, el.dataset.cfg);
+  if(v==null) return;
+  if(typeof v==='string' && v.includes('[')){
+    el.innerHTML = esc(v).replace(/\[[^\]]*\]/g, m=>`<mark class="todo">${m}</mark>`);
+  } else {
+    el.textContent = v;
+  }
+});
+document.querySelectorAll('[data-cfg-href]').forEach(el=>{
+  const v = dig(CONFIG, el.dataset.cfgHref);
+  if(v) el.setAttribute('href','mailto:'+v);
+});
+document.querySelectorAll('[data-cfg-prefix]').forEach(el=>{
+  const v = dig(CONFIG, el.dataset.cfgPrefix);
+  if(v!=null) el.textContent = v + (el.dataset.cfgSuffix||'');
+});
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* ---- hero rotator (dynamic flavour; respects reduced motion) ---- */
+const rotator = document.getElementById('rotator');
+const places = ['Asia','Thailand','Cambodia','Vietnam','Laos','the Philippines','Indonesia','Australia'];
+if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let i=0;
+  setInterval(()=>{
+    i=(i+1)%places.length;
+    rotator.style.opacity=0;
+    setTimeout(()=>{ rotator.textContent=places[i]; rotator.style.opacity=1; },180);
+  },2000);
+  rotator.style.transition='opacity .18s ease';
+}
+
+/* ---- reveal on scroll ---- */
+const io = new IntersectionObserver((es)=>{
+  es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ---- sticky bar appears after the hero ---- */
+const bar = document.getElementById('stickyBar');
+const heroEl = document.querySelector('.hero');
+new IntersectionObserver(([e])=>{
+  bar.classList.toggle('show', !e.isIntersecting);
+},{threshold:0}).observe(heroEl);
+
+/* ---- WhatsApp option (only if a number is set) ---- */
+if(CONFIG.whatsapp){
+  const num = CONFIG.whatsapp.replace(/[^0-9]/g,'');
+  const msg = encodeURIComponent("Hi Mad Monkey — I'd like to apply for the Q4 GM intake.");
+  const url = `https://wa.me/${num}?text=${msg}`;
+  const alt = document.getElementById('waAlt');
+  document.getElementById('waLink').href = url;
+  alt.style.display='block';
+}
+
+/* ---- modal open/close ---- */
+const modal = document.getElementById('modal');
+const openModal = ()=>{ modal.classList.add('open'); document.body.classList.add('modal-open');
+  setTimeout(()=>document.getElementById('fullName').focus(),50); };
+const closeModal = ()=>{ modal.classList.remove('open'); document.body.classList.remove('modal-open'); };
+document.querySelectorAll('[data-open-apply]').forEach(b=>b.addEventListener('click',openModal));
+document.getElementById('closeModal').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
+addEventListener('keydown',e=>{ if(e.key==='Escape' && modal.classList.contains('open')) closeModal(); });
+
+/* ---- file picker label ---- */
+const cv = document.getElementById('cv');
+const cvName = document.getElementById('cvName');
+cv.addEventListener('change',()=>{
+  cvName.textContent = cv.files[0] ? cv.files[0].name : 'No file yet — PDF or Word, max 10MB';
+});
+
+/* ---- Supabase client (never silently fall back — show errors loudly) ---- */
+let supabase = null;
+try{
+  const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+  if(CONFIG.supabaseUrl && CONFIG.supabaseAnonKey && !CONFIG.supabaseUrl.includes('[')){
+    supabase = createClient(CONFIG.supabaseUrl, CONFIG.supabaseAnonKey);
+  }
+}catch(err){ console.error('Supabase failed to load', err); }
+
+/* ---- attribution from the ad URL ---- */
+const q = new URLSearchParams(location.search);
+const attribution = {
+  utm_source:q.get('utm_source'), utm_medium:q.get('utm_medium'),
+  utm_campaign:q.get('utm_campaign'), utm_content:q.get('utm_content'), utm_term:q.get('utm_term'),
+  source_country:q.get('country'),
+};
+
+/* ---- form submit ---- */
+const form = document.getElementById('applyForm');
+const banner = document.getElementById('banner');
+const submitBtn = document.getElementById('submitBtn');
+const ALLOWED = ['pdf','doc','docx'];
+const MAX = 10*1024*1024;
+
+const showErr=(id,on)=>document.getElementById(id).classList.toggle('show',on);
+const showBanner=(html)=>{ banner.innerHTML=html; banner.classList.add('show'); banner.scrollIntoView({block:'nearest'}); };
+const hideBanner=()=>banner.classList.remove('show');
+
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  hideBanner();
+  const name = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const file = cv.files[0];
+
+  const okName = name.length>=2;
+  const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const ext = file ? file.name.split('.').pop().toLowerCase() : '';
+  const okFile = !!file && ALLOWED.includes(ext) && file.size<=MAX;
+  showErr('errName',!okName); showErr('errEmail',!okEmail); showErr('errCv',!okFile);
+  if(!(okName&&okEmail&&okFile)) return;
+
+  if(!supabase){
+    showBanner(`We can't reach our system right now — your details are still here, give it another go in a moment.`);
+    return;
+  }
+
+  submitBtn.disabled=true; const orig=submitBtn.textContent; submitBtn.textContent='Sending…';
+  try{
+    // Upload the CV, then log the application (with its link) to Supabase.
+    const safe = file.name.replace(/[^a-zA-Z0-9._-]/g,'_').slice(-80);
+    const path = `${new Date().toISOString().slice(0,10)}/${crypto.randomUUID()}__${safe}`;
+    const { error: upErr } = await supabase.storage.from('gm-cvs')
+      .upload(path, file, { contentType:file.type||'application/octet-stream', upsert:false });
+    if(upErr) throw upErr;
+    const cvUrl = supabase.storage.from('gm-cvs').getPublicUrl(path).data.publicUrl;
+
+    const { error: insErr } = await supabase.from('gm_applications').insert({
+      full_name:name, email, cv_url:cvUrl, cv_path:path, cv_name:file.name,
+      role:'GM', intake:CONFIG.intake, page_url:location.href, user_agent:navigator.userAgent,
+      ...attribution,
+    });
+    if(insErr) throw insErr;
+
+    document.getElementById('formView').style.display='none';
+    document.getElementById('successView').classList.add('show');
+  }catch(err){
+    console.error('Application save failed', err);
+    submitBtn.disabled=false; submitBtn.textContent=orig;
+    showBanner(`Something went wrong sending that — your details are still here, give it another go.`);
+  }
+});
+</script>
+</body>
+</html>
