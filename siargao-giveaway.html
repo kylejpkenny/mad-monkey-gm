@@ -411,6 +411,12 @@ body.modal-open .sticky{display:none}
           <span class="err" id="errEmail">We need a valid email to reach you.</span>
         </div>
         <div class="field">
+          <label for="whatsapp">WhatsApp number</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+63 912 345 6789" autocomplete="tel" inputmode="tel" required>
+          <span class="err" id="errWa">Add a WhatsApp number so we can reach you if you win.</span>
+          <span class="hint">Include your country code (e.g. +63). It's how we'll tell you if you've won.</span>
+        </div>
+        <div class="field">
           <label for="instagram">Instagram handle</label>
           <input type="text" id="instagram" name="instagram" placeholder="@yourhandle" autocapitalize="off" autocorrect="off">
           <span class="hint">So we can DM you if you win. Optional, but recommended.</span>
@@ -523,13 +529,15 @@ form.addEventListener('submit', async (e)=>{
   hideBanner();
   const name = document.getElementById('fullName').value.trim();
   const email = document.getElementById('email').value.trim();
+  const whatsapp = document.getElementById('whatsapp').value.trim();
   let ig = document.getElementById('instagram').value.trim();
   if(ig && !ig.startsWith('@')) ig = '@'+ig;
 
   const okName = name.length>=2;
   const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  showErr('errName',!okName); showErr('errEmail',!okEmail);
-  if(!(okName&&okEmail)) return;
+  const okWa = whatsapp.replace(/[^0-9]/g,'').length>=7;
+  showErr('errName',!okName); showErr('errEmail',!okEmail); showErr('errWa',!okWa);
+  if(!(okName&&okEmail&&okWa)) return;
 
   if(Date.now() > closeTs){
     showBanner('Entries for this giveaway have closed — but follow <a href="https://www.instagram.com/'+CONFIG.instagram+'/" target="_blank" rel="noopener">@'+CONFIG.instagram+'</a> for the next one.');
@@ -544,7 +552,7 @@ form.addEventListener('submit', async (e)=>{
   submitBtn.disabled=true; const orig=submitBtn.textContent; submitBtn.textContent='Sending…';
   try{
     const { error: insErr } = await supabase.from('competition_entries').insert({
-      full_name:name, email, instagram:ig||null,
+      full_name:name, email, whatsapp, instagram:ig||null,
       campaign:CONFIG.campaign, page_url:location.href, user_agent:navigator.userAgent,
       ...attribution,
     });

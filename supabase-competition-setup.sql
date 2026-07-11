@@ -13,6 +13,7 @@ create table if not exists competition_entries (
   created_at  timestamptz not null default now(),
   full_name   text        not null,
   email       text        not null,
+  whatsapp    text        not null,   -- WhatsApp number incl. country code
   instagram   text,                   -- @handle, optional
   campaign    text,                   -- e.g. 'siargao-giveaway'
   -- ad attribution (captured from the URL query string, never shown to the user)
@@ -25,6 +26,9 @@ create table if not exists competition_entries (
   page_url     text,
   user_agent   text
 );
+
+-- If the table already exists from an earlier run, add the WhatsApp column.
+alter table competition_entries add column if not exists whatsapp text;
 
 -- 2. Row Level Security — enable, then allow INSERT ONLY for the public key.
 --    No SELECT/UPDATE/DELETE policy ⇒ the anon/publishable key cannot read,
