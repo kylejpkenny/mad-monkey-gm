@@ -494,7 +494,7 @@ form.addEventListener('submit', async (e)=>{
 
   submitBtn.disabled=true; const orig=submitBtn.textContent; submitBtn.textContent='Sending…';
   try{
-    const { error: insErr } = await supabase.from('competition_entries').insert({
+    const { error: insErr } = await supabase.from('dnb_thailand_entries').insert({
       full_name:name, email, whatsapp,
       campaign:CONFIG.campaign, page_url:location.href, user_agent:navigator.userAgent,
       ...attribution,
