@@ -181,19 +181,14 @@ a{color:inherit}
 .foot .copy{margin-top:22px;font-size:.78rem;opacity:.5;font-weight:600}
 .foot a{color:var(--yellow);font-weight:800;text-decoration:none}
 
-/* ================= MODAL ================= */
-.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;
-  padding:18px;background:rgba(3,6,22,.86)}
-.modal.open{display:flex}
-.sheet{background:var(--navy2);color:var(--bone);border:3px solid var(--yellow);border-radius:20px;
-  box-shadow:var(--sh),0 0 40px rgba(255,45,155,.35);width:min(500px,100%);max-height:92svh;overflow:auto;
-  padding:clamp(24px,5vw,38px);position:relative}
-.sheet .kicker{color:var(--cyan);margin-bottom:8px}
-.sheet h2{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,6vw,2.6rem);text-transform:uppercase;line-height:.95}
-.sheet .sub{font-weight:500;opacity:.9;margin:12px 0 24px;font-size:.98rem}
-.x{position:absolute;top:14px;right:14px;width:40px;height:40px;border:2px solid var(--bone);border-radius:50%;
-  background:transparent;color:var(--bone);font-weight:900;font-size:1.1rem;cursor:pointer;line-height:1}
-.x:hover{background:var(--pink);color:var(--white);border-color:var(--pink)}
+/* ================= INLINE ENTRY FORM ================= */
+.enter{padding:clamp(38px,7vw,80px) clamp(18px,5vw,40px) clamp(30px,5vw,56px);position:relative;z-index:2}
+.enter-card{background:var(--navy2);color:var(--bone);border:3px solid var(--yellow);border-radius:20px;
+  box-shadow:var(--sh),0 0 40px rgba(255,45,155,.28);width:min(520px,100%);margin:0 auto;
+  padding:clamp(24px,5vw,40px);scroll-margin-top:16px}
+.enter-card .kicker{color:var(--cyan);margin-bottom:8px}
+.enter-card h2{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,6vw,2.6rem);text-transform:uppercase;line-height:.95}
+.enter-card .sub{font-weight:500;opacity:.9;margin:12px 0 24px;font-size:.98rem}
 .field{margin-bottom:18px}
 .field label{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-bottom:7px}
 .field input{width:100%;font-family:inherit;font-size:1.02rem;font-weight:600;padding:14px 16px;
@@ -253,7 +248,7 @@ body.modal-open .sticky{display:none}
   <div class="crowd" aria-hidden="true"></div>
 
   <div class="hero-top">
-    <img class="mm" src="photos/logo-black.png" alt="Mad Monkey" style="filter:invert(1) brightness(2)">
+    <img class="mm mm--icon" src="photos/mad-monkey-icon.png" alt="Mad Monkey" style="filter:invert(1) brightness(2)">
     <span class="badge">🔊 Free entry</span>
   </div>
 
@@ -281,35 +276,12 @@ body.modal-open .sticky{display:none}
 
 </header>
 
-<!-- ================= MARQUEE ================= -->
-<div class="marq" aria-hidden="true">
-  <div class="track" id="marqTrack">
-    <span>Bass</span><span class="dot">✦</span><span>Festival</span><span class="dot">✦</span><span>Beds</span><span class="dot">✦</span><span>Free Entry</span><span class="dot">✦</span><span>One Winner</span><span class="dot">✦</span><span>All In</span><span class="dot">✦</span>
-    <span>Bass</span><span class="dot">✦</span><span>Festival</span><span class="dot">✦</span><span>Beds</span><span class="dot">✦</span><span>Free Entry</span><span class="dot">✦</span><span>One Winner</span><span class="dot">✦</span><span>All In</span><span class="dot">✦</span>
-  </div>
-</div>
-
-<!-- ================= FOOT ================= -->
-<footer class="foot">
-  <img class="mm" src="photos/logo-black.png" alt="Mad Monkey">
-  <p class="fine">Entries open Friday 4PM and close Wednesday 12PM (Bali time). To enter you must submit your details, follow <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels</a> and tag a mate in the comments of the giveaway post. One winner is drawn at random from all valid entries and contacted by email and Instagram DM. Prize: a 3-day DnB All Stars festival pass, a 4-night Mad Monkey stay, a daily festival shuttle and pre-party entry. Flights and personal spending not included. One entry per person.</p>
-  <p class="copy">© <span id="yr"></span> Mad Monkey Hostels · DnB All Stars Thailand Giveaway</p>
-</footer>
-
-<!-- ================= STICKY ================= -->
-<div class="sticky" id="stickyBar">
-  <span class="lbl"><b id="stickyLabel">Free to enter</b></span>
-  <button class="btn" data-open-enter>Count me in →</button>
-</div>
-
-<!-- ================= MODAL ================= -->
-<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
-  <div class="sheet">
-    <button class="x" id="closeModal" aria-label="Close">✕</button>
-
+<!-- ================= INLINE ENTRY FORM ================= -->
+<section class="enter" id="enter">
+  <div class="enter-card">
     <div id="formView">
       <p class="kicker">DnB All Stars Thailand 🔊</p>
-      <h2 class="anton" id="mTitle">Drop your details,<br>grab your spot</h2>
+      <h2 class="anton">Drop your details,<br>grab your spot</h2>
       <p class="sub">Name, email, WhatsApp — that's step one. Then follow us and tag a mate to lock it in.</p>
 
       <div class="formbanner" id="banner"></div>
@@ -348,6 +320,27 @@ body.modal-open .sticky{display:none}
       <p class="micro" style="margin-top:18px">We draw one winner after entries close and reach out by email and Instagram DM. Good luck! 🍀</p>
     </div>
   </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marq" aria-hidden="true">
+  <div class="track" id="marqTrack">
+    <span>Bass</span><span class="dot">✦</span><span>Festival</span><span class="dot">✦</span><span>Beds</span><span class="dot">✦</span><span>Free Entry</span><span class="dot">✦</span><span>One Winner</span><span class="dot">✦</span><span>All In</span><span class="dot">✦</span>
+    <span>Bass</span><span class="dot">✦</span><span>Festival</span><span class="dot">✦</span><span>Beds</span><span class="dot">✦</span><span>Free Entry</span><span class="dot">✦</span><span>One Winner</span><span class="dot">✦</span><span>All In</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ================= FOOT ================= -->
+<footer class="foot">
+  <img class="mm" src="photos/logo-black.png" alt="Mad Monkey">
+  <p class="fine">Entries open Friday 4PM and close Wednesday 12PM (Bali time). To enter you must submit your details, follow <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels</a> and tag a mate in the comments of the giveaway post. One winner is drawn at random from all valid entries and contacted by email and Instagram DM. Prize: a 3-day DnB All Stars festival pass, a 4-night Mad Monkey stay, a daily festival shuttle and pre-party entry. Flights and personal spending not included. One entry per person.</p>
+  <p class="copy">© <span id="yr"></span> Mad Monkey Hostels · DnB All Stars Thailand Giveaway</p>
+</footer>
+
+<!-- ================= STICKY ================= -->
+<div class="sticky" id="stickyBar">
+  <span class="lbl"><b id="stickyLabel">Free to enter</b></span>
+  <button class="btn" data-open-enter>Count me in →</button>
 </div>
 
 <script type="module">
@@ -435,15 +428,12 @@ function confetti(){
   setTimeout(()=>wrap.remove(),4600);
 }
 
-/* -------- modal -------- */
-const modal = document.getElementById('modal');
-const openModal = ()=>{ modal.classList.add('open'); document.body.classList.add('modal-open');
-  setTimeout(()=>document.getElementById('fullName').focus(),50); };
-const closeModal = ()=>{ modal.classList.remove('open'); document.body.classList.remove('modal-open'); };
-document.querySelectorAll('[data-open-enter]').forEach(b=>b.addEventListener('click',openModal));
-document.getElementById('closeModal').addEventListener('click',closeModal);
-modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
-addEventListener('keydown',e=>{ if(e.key==='Escape' && modal.classList.contains('open')) closeModal(); });
+/* -------- scroll to the inline form -------- */
+const goToForm = ()=>{
+  document.getElementById('enter').scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(()=>{ try{ document.getElementById('fullName').focus({preventScroll:true}); }catch(e){} }, 480);
+};
+document.querySelectorAll('[data-open-enter]').forEach(b=>b.addEventListener('click',goToForm));
 
 /* -------- supabase -------- */
 let supabase = null;
@@ -494,7 +484,7 @@ form.addEventListener('submit', async (e)=>{
 
   submitBtn.disabled=true; const orig=submitBtn.textContent; submitBtn.textContent='Sending…';
   try{
-    const { error: insErr } = await supabase.from('competition_entries').insert({
+    const { error: insErr } = await supabase.from('dnb_thailand_entries').insert({
       full_name:name, email, whatsapp,
       campaign:CONFIG.campaign, page_url:location.href, user_agent:navigator.userAgent,
       ...attribution,
