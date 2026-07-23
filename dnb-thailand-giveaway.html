@@ -213,6 +213,10 @@ a{color:inherit}
 .success .anton{font-size:clamp(2.2rem,9vw,3.4rem);color:var(--yellow);margin:6px 0 14px;text-shadow:0 0 22px rgba(255,194,26,.5)}
 .success p{margin:0 auto 16px;font-weight:500}
 .success a{color:var(--cyan);font-weight:800;text-decoration:none}
+.success .steps2{list-style:none;display:grid;gap:12px;margin:18px auto 22px;max-width:330px;text-align:left}
+.success .steps2 li{display:flex;gap:12px;align-items:center;font-weight:700;font-size:1.02rem}
+.success .steps2 .n{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--yellow);color:var(--ink);
+  display:grid;place-items:center;font-family:'Anton';font-size:1.05rem}
 
 /* confetti */
 .confetti{position:fixed;inset:0;z-index:70;pointer-events:none;overflow:hidden}
@@ -275,16 +279,6 @@ body.modal-open .sticky{display:none}
     </div>
   </div>
 
-  <!-- Mad Monkey Thailand stamp -->
-  <div class="hero-stamp">
-    <div class="stamp">
-      <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
-        <defs><path id="ringpath" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
-        <text><textPath href="#ringpath" startOffset="0" textLength="251" lengthAdjust="spacingAndGlyphs">MAD MONKEY · THAILAND · </textPath></text>
-      </svg>
-      <div class="core"><img src="photos/logo-black.png" alt="Mad Monkey Thailand"></div>
-    </div>
-  </div>
 </header>
 
 <!-- ================= MARQUEE ================= -->
@@ -298,7 +292,7 @@ body.modal-open .sticky{display:none}
 <!-- ================= FOOT ================= -->
 <footer class="foot">
   <img class="mm" src="photos/logo-black.png" alt="Mad Monkey">
-  <p class="fine">Entries open Friday 4PM and close Wednesday 12PM (Bali time). One winner is drawn at random from all valid entries and hit up on WhatsApp and email. Prize: a 3-day DnB All Stars festival pass, a 4-night Mad Monkey stay, a daily festival shuttle and pre-party entry. Flights and personal spending not included. One entry per person. Follow <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels</a>.</p>
+  <p class="fine">Entries open Friday 4PM and close Wednesday 12PM (Bali time). To enter you must submit your details, follow <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels</a> and tag a mate in the comments of the giveaway post. One winner is drawn at random from all valid entries and contacted on WhatsApp, email and Instagram DM. Prize: a 3-day DnB All Stars festival pass, a 4-night Mad Monkey stay, a daily festival shuttle and pre-party entry. Flights and personal spending not included. One entry per person.</p>
   <p class="copy">© <span id="yr"></span> Mad Monkey Hostels · DnB All Stars Thailand Giveaway</p>
 </footer>
 
@@ -316,7 +310,7 @@ body.modal-open .sticky{display:none}
     <div id="formView">
       <p class="kicker">DnB All Stars Thailand 🔊</p>
       <h2 class="anton" id="mTitle">Drop your details,<br>grab your spot</h2>
-      <p class="sub">Name, email, WhatsApp — that's your ticket in the draw. Ten seconds, tops.</p>
+      <p class="sub">Name, email, WhatsApp — that's step one. Then follow us and tag a mate to lock it in.</p>
 
       <div class="formbanner" id="banner"></div>
 
@@ -343,10 +337,15 @@ body.modal-open .sticky{display:none}
     </div>
 
     <div class="success" id="successView">
-      <p class="kicker" style="color:var(--cyan)">You're in 🎉</p>
-      <div class="anton">See you on the dancefloor.</div>
-      <p>Your entry's locked in. We draw one winner after entries close — if it's you, we'll hit you up on WhatsApp and email.</p>
-      <p>Follow so you don't miss it: <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels →</a></p>
+      <p class="kicker" style="color:var(--cyan)">Almost there 🎉</p>
+      <div class="anton">2 steps to lock it in</div>
+      <p>Your details are saved. Now jump on our giveaway post and finish up:</p>
+      <ol class="steps2">
+        <li><span class="n">1</span> <span><b>Follow</b> <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels</a></span></li>
+        <li><span class="n">2</span> <span><b>Tag a mate</b> in the comments</span></li>
+      </ol>
+      <a class="btn" href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener" style="width:min(360px,90%)">Follow &amp; tag →</a>
+      <p class="micro" style="margin-top:18px">We draw one winner after entries close and reach out on WhatsApp, email and Instagram DM. Good luck! 🍀</p>
     </div>
   </div>
 </div>
@@ -402,7 +401,7 @@ function renderCount(){
   countEl.classList.remove('done');
   const target = p === 'before' ? openTs : closeTs;
   stickyLabel.textContent = p === 'before' ? 'Opens Fri 4PM' : 'Free to enter';
-  ctaSub.textContent = p === 'before' ? 'Goes live Friday 4PM (Bali) ⏳' : 'One winner takes the lot 🎉';
+  ctaSub.textContent = 'One winner takes the lot 🎉';
   const diff = target - now;
   const d = Math.floor(diff/86400000), h = Math.floor(diff%86400000/3600000),
         m = Math.floor(diff%3600000/60000), s = Math.floor(diff%60000/1000);
