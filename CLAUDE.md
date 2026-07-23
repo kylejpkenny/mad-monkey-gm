@@ -8,6 +8,9 @@
   - `photos/mad-monkey-icon.png` — black on transparent, for LIGHT backgrounds.
   - `photos/mad-monkey-icon-white.png` — white silhouette with the face features
     knocked out (transparent), for DARK backgrounds.
+  - `photos/mad-monkey-face.png` — the two-tone logo (white face + black hair/
+    outline/features). Preferred on the giveaway nav; on very dark backgrounds
+    give it a soft light `drop-shadow` so the black hair edge stays visible.
 - Do NOT just `filter:invert()` the black icon on a dark background — inverting
   flips the white face to black and the friendly monkey looks "evil". Use the
   dedicated `-white` version instead.
