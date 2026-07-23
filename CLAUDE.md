@@ -1,12 +1,16 @@
 # Mad Monkey — repo notes for Claude
 
 ## Logo usage
-- Use **`photos/mad-monkey-icon.png`** (the monkey-face icon, no wordmark) as the
-  primary Mad Monkey logo on pages in this repo — e.g. site nav / top-left.
-  Prefer it over the full wordmark `photos/logo-black.png` unless a full
-  wordmark is specifically wanted (e.g. a footer signature).
-- The icon is black on transparent; on dark backgrounds apply
-  `filter:invert(1) brightness(2)` to render it white.
+- Use the **monkey-face icon** (no wordmark) as the primary Mad Monkey logo on
+  pages in this repo — e.g. site nav / top-left. Prefer it over the full
+  wordmark `photos/logo-black.png` unless a full wordmark is specifically wanted.
+- Two versions:
+  - `photos/mad-monkey-icon.png` — black on transparent, for LIGHT backgrounds.
+  - `photos/mad-monkey-icon-white.png` — white silhouette with the face features
+    knocked out (transparent), for DARK backgrounds.
+- Do NOT just `filter:invert()` the black icon on a dark background — inverting
+  flips the white face to black and the friendly monkey looks "evil". Use the
+  dedicated `-white` version instead.
 
 ## Giveaway pages
 - `dnb-thailand-giveaway.html` — DnB All Stars Thailand giveaway. Entries save to
