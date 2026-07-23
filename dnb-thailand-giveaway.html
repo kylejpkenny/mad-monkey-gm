@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#050a24">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Kaushan+Script&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#050a24; --navy2:#0b1750; --blue:#12256e; --steel:#1c357f;
@@ -24,7 +24,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'Montserrat',system-ui,sans-serif;background:var(--navy);color:var(--bone);
+body{font-family:'Inter',system-ui,sans-serif;background:var(--navy);color:var(--bone);
   line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
@@ -32,7 +32,7 @@ a{color:inherit}
 
 /* ---------- type ---------- */
 .anton{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.9}
-.script{font-family:'Pacifico',cursive;font-weight:400;line-height:.95;text-transform:none}
+.script{font-family:'Kaushan Script',cursive;font-weight:400;line-height:.95;text-transform:none}
 .kicker{font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:clamp(.7rem,1.9vw,.9rem)}
 
 /* ---------- buttons ---------- */
@@ -50,15 +50,14 @@ a{color:inherit}
 }
 
 /* ---------- dnb logo ---------- */
-.dnb{display:block;width:clamp(150px,34vw,300px);height:auto;
+.dnb{display:block;width:clamp(150px,32vw,290px);height:auto;
   filter:drop-shadow(0 0 12px rgba(34,224,255,.55)) drop-shadow(0 0 26px rgba(255,45,155,.35))}
-.dnb path,.dnb line,.dnb circle{stroke:var(--white);stroke-width:24;fill:none;stroke-linecap:round;stroke-linejoin:round}
 
 /* ---------- Mad Monkey stamp ---------- */
 .stamp{position:relative;width:clamp(96px,17vw,150px);aspect-ratio:1;color:var(--yellow);
   filter:drop-shadow(0 0 10px rgba(255,194,26,.4))}
 .stamp .ring{position:absolute;inset:0;animation:spin 22s linear infinite}
-.stamp text{font-family:'Montserrat';font-weight:900;font-size:11.2px;letter-spacing:.14em;fill:var(--yellow);text-transform:uppercase}
+.stamp text{font-family:'Inter';font-weight:900;font-size:11.2px;letter-spacing:.14em;fill:var(--yellow);text-transform:uppercase}
 .stamp .core{position:absolute;inset:19%;border-radius:50%;background:var(--yellow);
   display:grid;place-items:center;box-shadow:var(--sh)}
 .stamp .core img{width:74%}
@@ -255,14 +254,8 @@ body.modal-open .sticky{display:none}
   </div>
 
   <div class="hero-mid">
-    <!-- DnB All Stars logo -->
-    <svg class="dnb" viewBox="0 0 300 130" role="img" aria-label="DnB All Stars">
-      <line x1="74" y1="16" x2="74" y2="112"/>
-      <circle cx="48" cy="86" r="24" fill="none" stroke-width="24" stroke-linecap="round"/>
-      <path d="M112 112 V74 C112 62 122 58 134 58 C146 58 156 62 156 74 V112"/>
-      <line x1="188" y1="16" x2="188" y2="112"/>
-      <circle cx="214" cy="86" r="24" fill="none" stroke-width="24" stroke-linecap="round"/>
-    </svg>
+    <!-- DnB Allstars official logo -->
+    <img class="dnb" src="photos/dnb-allstars-logo.png" width="800" height="277" alt="DnB Allstars" decoding="async">
 
     <div class="script hl-script">thailand</div>
     <div class="anton hl-give">Giveaway</div>
