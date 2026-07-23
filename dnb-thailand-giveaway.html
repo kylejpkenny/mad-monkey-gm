@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DnB All Stars Thailand Giveaway · Win It All with Mad Monkey</title>
+<meta name="description" content="Win the DnB All Stars Thailand package with Mad Monkey — 3-day festival pass, 4-night hostel stay, daily shuttle and pre party. One winner. Free to enter.">
+<meta property="og:title" content="DnB All Stars Thailand Giveaway — All In with Mad Monkey">
+<meta property="og:description" content="3-Day Festival Pass · 4-Night Stay · Daily Shuttle · Pre Party. One winner. Free to enter.">
+<meta property="og:image" content="photos/hero.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#050a24">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#050a24; --navy2:#0b1750; --blue:#12256e; --steel:#1c357f;
+  --yellow:#ffc21a; --gold:#ffb300;
+  --dusk:#ff7a34; --ember:#ff5a1f;
+  --pink:#ff2d9b; --cyan:#22e0ff; --lime:#c6ff2e; --violet:#8a5cff;
+  --bone:#f6f1e6; --white:#ffffff; --ink:#07060a;
+  --sh:6px 6px 0 0 var(--ink);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Montserrat',system-ui,sans-serif;background:var(--navy);color:var(--bone);
+  line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+::selection{background:var(--pink);color:var(--white)}
+
+/* ---------- type ---------- */
+.anton{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.9}
+.script{font-family:'Pacifico',cursive;font-weight:400;line-height:.95;text-transform:none}
+.kicker{font-weight:800;text-transform:uppercase;letter-spacing:.22em;font-size:clamp(.7rem,1.9vw,.9rem)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55ch;
+  font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.03em;
+  font-size:clamp(1.15rem,3.4vw,1.6rem);padding:.62em 1.25em;
+  background:var(--yellow);color:var(--ink);border:0;border-radius:999px;cursor:pointer;
+  text-decoration:none;box-shadow:var(--sh);transition:transform .1s ease,box-shadow .1s ease,background .15s}
+.btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 0 var(--ink);background:#ffce45}
+.btn:active{transform:translate(6px,6px);box-shadow:0 0 0 0 var(--ink)}
+.btn--glow{animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{
+  0%,100%{box-shadow:6px 6px 0 0 var(--ink), 0 0 0 0 rgba(255,45,155,.55)}
+  50%{box-shadow:6px 6px 0 0 var(--ink), 0 0 34px 6px rgba(255,45,155,.55)}
+}
+
+/* ---------- dnb logo ---------- */
+.dnb{display:block;width:clamp(150px,34vw,300px);height:auto;
+  filter:drop-shadow(0 0 12px rgba(34,224,255,.55)) drop-shadow(0 0 26px rgba(255,45,155,.35))}
+.dnb path,.dnb line,.dnb circle{stroke:var(--white);stroke-width:24;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* ---------- Mad Monkey stamp ---------- */
+.stamp{position:relative;width:clamp(96px,17vw,150px);aspect-ratio:1;color:var(--yellow);
+  filter:drop-shadow(0 0 10px rgba(255,194,26,.4))}
+.stamp .ring{position:absolute;inset:0;animation:spin 22s linear infinite}
+.stamp text{font-family:'Montserrat';font-weight:900;font-size:11.2px;letter-spacing:.14em;fill:var(--yellow);text-transform:uppercase}
+.stamp .core{position:absolute;inset:19%;border-radius:50%;background:var(--yellow);
+  display:grid;place-items:center;box-shadow:var(--sh)}
+.stamp .core img{width:74%}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ================= HERO ================= */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
+  padding:clamp(20px,4vw,34px) clamp(20px,5vw,60px) clamp(56px,8vw,96px);overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-3;
+  background:
+    radial-gradient(115% 62% at 50% 116%, rgba(255,120,52,.62) 0%, rgba(255,120,52,0) 46%),
+    radial-gradient(80% 46% at 74% 110%, rgba(255,45,155,.30) 0%, rgba(255,45,155,0) 44%),
+    radial-gradient(70% 40% at 22% 108%, rgba(34,224,255,.24) 0%, rgba(34,224,255,0) 46%),
+    linear-gradient(180deg,#03071c 0%,#060d33 38%,#0c1a54 66%,#15296f 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;opacity:.55;
+  background-image:
+    radial-gradient(1.4px 1.4px at 14% 16%,#fff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 30% 30%,#fff 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 48% 12%,#fff 50%,transparent 51%),
+    radial-gradient(1.1px 1.1px at 66% 24%,#fff 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 84% 15%,#fff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 92% 32%,#fff 50%,transparent 51%),
+    radial-gradient(1.3px 1.3px at 9% 40%,#fff 50%,transparent 51%),
+    radial-gradient(1.2px 1.2px at 38% 46%,#fff 50%,transparent 51%);
+  animation:twinkle 4s ease-in-out infinite alternate}
+@keyframes twinkle{from{opacity:.35}to{opacity:.7}}
+
+/* sweeping stage-light beams */
+.beams{position:absolute;top:-30%;left:50%;width:220%;height:150%;z-index:-2;transform:translateX(-50%);
+  transform-origin:50% 0;mix-blend-mode:screen;opacity:.8;
+  background:conic-gradient(from 180deg at 50% 0%,
+    transparent 0 5deg, rgba(34,224,255,.16) 5deg 8deg, transparent 8deg 14deg,
+    rgba(255,45,155,.16) 14deg 17deg, transparent 17deg 23deg,
+    rgba(198,255,46,.14) 23deg 26deg, transparent 26deg 33deg,
+    rgba(255,194,26,.16) 33deg 36deg, transparent 36deg 43deg,
+    rgba(138,92,255,.16) 43deg 46deg, transparent 46deg 50deg);
+  animation:sweep 9s ease-in-out infinite alternate}
+@keyframes sweep{from{transform:translateX(-50%) rotate(-7deg)}to{transform:translateX(-50%) rotate(7deg)}}
+
+/* animated equaliser / soundwave along the bottom */
+.eq{position:absolute;left:0;right:0;bottom:0;height:clamp(70px,12vw,130px);z-index:-1;
+  display:flex;align-items:flex-end;gap:2px;padding:0 2px;opacity:.9;
+  -webkit-mask:linear-gradient(180deg,transparent,#000 60%);mask:linear-gradient(180deg,transparent,#000 60%)}
+.eq i{flex:1 1 auto;display:block;border-radius:3px 3px 0 0;
+  background:linear-gradient(180deg,var(--cyan),var(--pink) 55%,var(--violet));
+  transform-origin:bottom;animation:bar 1s ease-in-out infinite alternate}
+.crowd{position:absolute;left:0;right:0;bottom:0;height:clamp(50px,9vw,96px);z-index:-1;opacity:.9;
+  background:repeating-linear-gradient(90deg,#03050f 0 8px,transparent 8px 15px);
+  -webkit-mask:radial-gradient(120% 90% at 50% 130%,#000 55%,transparent 70%);
+  mask:radial-gradient(120% 90% at 50% 130%,#000 55%,transparent 70%)}
+@keyframes bar{from{transform:scaleY(.18)}to{transform:scaleY(1)}}
+
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative;z-index:2}
+.hero-top .mm{height:clamp(34px,6vw,52px);width:auto}
+.hero-top .badge{font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;
+  padding:.5em 1em;border-radius:999px;background:var(--pink);color:var(--white);
+  box-shadow:0 0 18px rgba(255,45,155,.6);animation:wob 3s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+
+.hero-mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;z-index:2;padding:clamp(14px,3vw,28px) 0}
+.hero-mid .dnb{margin-bottom:clamp(8px,2vw,16px)}
+.hl-script{color:var(--yellow);font-size:clamp(3.4rem,15vw,9rem);margin:-.06em 0 -.04em;
+  text-shadow:0 3px 0 rgba(0,0,0,.28), 0 0 26px rgba(255,194,26,.55);
+  animation:hue 8s ease-in-out infinite}
+@keyframes hue{0%,100%{filter:none}50%{filter:drop-shadow(0 0 18px rgba(255,45,155,.5))}}
+.hl-give{color:var(--white);font-size:clamp(2.1rem,9.6vw,6rem);letter-spacing:.02em;
+  text-shadow:0 0 22px rgba(34,224,255,.35)}
+.allin{display:inline-block;margin-top:clamp(12px,2.4vw,20px);background:var(--ink);color:var(--white);
+  font-family:'Anton',sans-serif;font-size:clamp(1.4rem,5.2vw,2.8rem);
+  padding:.12em .5em;transform:skewX(-9deg) rotate(-1.5deg);
+  box-shadow:var(--sh), 0 0 24px rgba(255,45,155,.4);border:2px solid var(--pink)}
+.allin b{color:var(--yellow);font-weight:400}
+
+/* inclusions list — festival tags */
+.incl{width:min(600px,100%);margin:clamp(20px,3.5vw,30px) auto 0;position:relative;z-index:2;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px}
+.incl li{list-style:none;display:inline-flex;align-items:center;gap:.5ch;
+  font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.03em;
+  font-size:clamp(.85rem,3vw,1.2rem);color:var(--white);
+  padding:.5em 1em;border-radius:999px;background:rgba(255,255,255,.06);
+  border:2px solid rgba(255,255,255,.16);backdrop-filter:blur(3px)}
+.incl li:nth-child(1){border-color:var(--cyan);box-shadow:0 0 16px rgba(34,224,255,.28)}
+.incl li:nth-child(2){border-color:var(--pink);box-shadow:0 0 16px rgba(255,45,155,.28)}
+.incl li:nth-child(3){border-color:var(--lime);box-shadow:0 0 16px rgba(198,255,46,.28)}
+.incl li:nth-child(4){border-color:var(--yellow);box-shadow:0 0 16px rgba(255,194,26,.28)}
+.incl li .em{font-size:1.1em}
+
+.hero-cta{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:clamp(22px,3.5vw,32px);position:relative;z-index:2}
+.hero-cta .btn{width:min(440px,90vw)}
+.hero-cta .sub{font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;color:var(--cyan)}
+
+.hero-stamp{position:absolute;right:clamp(14px,4vw,44px);bottom:clamp(74px,10vw,120px);z-index:3}
+@media(max-width:640px){.hero-stamp{right:12px;bottom:70px}}
+
+/* countdown */
+.count{display:flex;gap:8px;justify-content:center}
+.count .u{background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.18);border-radius:14px;
+  min-width:60px;padding:9px 7px;text-align:center;backdrop-filter:blur(2px)}
+.count .n{font-family:'Anton',sans-serif;font-size:clamp(1.35rem,4.8vw,2rem);line-height:1;color:var(--white)}
+.count .l{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.58rem;margin-top:3px;color:var(--cyan)}
+.count.done .u{min-width:auto;padding:10px 16px;border-color:var(--pink)}
+.count.done .l{font-size:.8rem;color:var(--bone)}
+
+/* ================= MARQUEE ================= */
+.marq{background:var(--yellow);color:var(--ink);overflow:hidden;white-space:nowrap;
+  border-top:4px solid var(--ink);border-bottom:4px solid var(--ink);padding:clamp(12px,2.2vw,18px) 0}
+.marq .track{display:inline-block;will-change:transform;animation:scroll 22s linear infinite}
+.marq span{font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.05em;
+  font-size:clamp(1.05rem,3.4vw,1.7rem);padding:0 .55em}
+.marq .dot{color:var(--ember)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ================= FOOT ================= */
+.foot{padding:clamp(40px,7vw,72px) clamp(20px,5vw,60px);text-align:center;background:var(--navy);position:relative;overflow:hidden}
+.foot::before{content:"";position:absolute;inset:0;z-index:0;opacity:.5;
+  background:radial-gradient(60% 70% at 50% 130%, rgba(255,45,155,.25), transparent 70%)}
+.foot>*{position:relative;z-index:1}
+.foot .mm{height:46px;width:auto;margin:0 auto 20px;filter:invert(1) brightness(2)}
+.foot .fine{max-width:60ch;margin:0 auto;font-weight:500;font-size:.9rem;opacity:.72}
+.foot .copy{margin-top:22px;font-size:.78rem;opacity:.5;font-weight:600}
+.foot a{color:var(--yellow);font-weight:800;text-decoration:none}
+
+/* ================= MODAL ================= */
+.modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;
+  padding:18px;background:rgba(3,6,22,.86)}
+.modal.open{display:flex}
+.sheet{background:var(--navy2);color:var(--bone);border:3px solid var(--yellow);border-radius:20px;
+  box-shadow:var(--sh),0 0 40px rgba(255,45,155,.35);width:min(500px,100%);max-height:92svh;overflow:auto;
+  padding:clamp(24px,5vw,38px);position:relative}
+.sheet .kicker{color:var(--cyan);margin-bottom:8px}
+.sheet h2{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,6vw,2.6rem);text-transform:uppercase;line-height:.95}
+.sheet .sub{font-weight:500;opacity:.9;margin:12px 0 24px;font-size:.98rem}
+.x{position:absolute;top:14px;right:14px;width:40px;height:40px;border:2px solid var(--bone);border-radius:50%;
+  background:transparent;color:var(--bone);font-weight:900;font-size:1.1rem;cursor:pointer;line-height:1}
+.x:hover{background:var(--pink);color:var(--white);border-color:var(--pink)}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;font-size:.78rem;margin-bottom:7px}
+.field input{width:100%;font-family:inherit;font-size:1.02rem;font-weight:600;padding:14px 16px;
+  border:2px solid rgba(246,241,230,.35);background:rgba(255,255,255,.04);color:var(--bone);border-radius:12px}
+.field input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,224,255,.25)}
+.field .hint{font-size:.76rem;opacity:.62;font-weight:600;margin-top:6px}
+.err{color:var(--ember);font-weight:700;font-size:.82rem;margin-top:7px;display:none}
+.err.show{display:block}
+.formbanner{display:none;border:2px solid var(--ember);color:var(--bone);padding:13px 15px;margin-bottom:18px;
+  font-weight:600;background:rgba(255,90,31,.12);border-radius:12px;font-size:.92rem}
+.formbanner.show{display:block}
+.submit{width:100%;margin-top:4px}
+.submit[disabled]{opacity:.7;cursor:wait}
+.micro{font-size:.76rem;opacity:.68;margin-top:14px;font-weight:500;line-height:1.5}
+.success{display:none;text-align:center}
+.success.show{display:block}
+.success .anton{font-size:clamp(2.2rem,9vw,3.4rem);color:var(--yellow);margin:6px 0 14px;text-shadow:0 0 22px rgba(255,194,26,.5)}
+.success p{margin:0 auto 16px;font-weight:500}
+.success a{color:var(--cyan);font-weight:800;text-decoration:none}
+
+/* confetti */
+.confetti{position:fixed;inset:0;z-index:70;pointer-events:none;overflow:hidden}
+.confetti i{position:absolute;top:-12px;width:9px;height:14px;opacity:.95;border-radius:1px;
+  animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:1}}
+
+/* sticky bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);
+  border-top:3px solid var(--pink);display:flex;align-items:center;justify-content:space-between;
+  gap:14px;padding:12px clamp(16px,5vw,40px);transform:translateY(130%);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.sticky.show{transform:none}
+.sticky .lbl{font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:.9rem;color:var(--bone)}
+.sticky .lbl b{color:var(--yellow)}
+.sticky .btn{font-size:1.05rem;padding:.5em 1.1em}
+@media(max-width:560px){.sticky .lbl{display:none}.sticky{justify-content:center}}
+body.modal-open .sticky{display:none}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .stamp .ring,.beams,.eq i,.hero-bg::after,.hl-script,.badge,.btn--glow,.marq .track,.confetti i{animation:none!important}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="beams"></div>
+  <div class="eq" id="eq" aria-hidden="true"></div>
+  <div class="crowd" aria-hidden="true"></div>
+
+  <div class="hero-top">
+    <img class="mm" src="photos/logo-black.png" alt="Mad Monkey" style="filter:invert(1) brightness(2)">
+    <span class="badge">🔊 Free entry</span>
+  </div>
+
+  <div class="hero-mid">
+    <!-- DnB All Stars logo -->
+    <svg class="dnb" viewBox="0 0 300 130" role="img" aria-label="DnB All Stars">
+      <line x1="74" y1="16" x2="74" y2="112"/>
+      <circle cx="48" cy="86" r="24" fill="none" stroke-width="24" stroke-linecap="round"/>
+      <path d="M112 112 V74 C112 62 122 58 134 58 C146 58 156 62 156 74 V112"/>
+      <line x1="188" y1="16" x2="188" y2="112"/>
+      <circle cx="214" cy="86" r="24" fill="none" stroke-width="24" stroke-linecap="round"/>
+    </svg>
+
+    <div class="script hl-script">thailand</div>
+    <div class="anton hl-give">Giveaway</div>
+    <div class="allin">ALL <b>IN</b></div>
+
+    <ul class="incl">
+      <li><span class="em">🎟️</span> 3-Day Festival Pass</li>
+      <li><span class="em">🛏️</span> 4-Night Stay</li>
+      <li><span class="em">🚐</span> Daily Shuttle</li>
+      <li><span class="em">🔊</span> Pre Party</li>
+    </ul>
+
+    <div class="hero-cta">
+      <div class="count" id="count" aria-live="polite"></div>
+      <button class="btn btn--glow" data-open-enter>Count me in →</button>
+      <span class="sub" id="ctaSub">One winner takes the lot 🎉</span>
+    </div>
+  </div>
+
+  <!-- Mad Monkey Thailand stamp -->
+  <div class="hero-stamp">
+    <div class="stamp">
+      <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="ringpath" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
+        <text><textPath href="#ringpath" startOffset="0" textLength="251" lengthAdjust="spacingAndGlyphs">MAD MONKEY · THAILAND · </textPath></text>
+      </svg>
+      <div class="core"><img src="photos/logo-black.png" alt="Mad Monkey Thailand"></div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marq" aria-hidden="true">
+  <div class="track" id="marqTrack">
+    <span>Bass</span><span class="dot">✦</span><span>Beach</span><span class="dot">✦</span><span>Beds</span><span class="dot">✦</span><span>Free Entry</span><span class="dot">✦</span><span>One Winner</span><span class="dot">✦</span><span>All In</span><span class="dot">✦</span>
+    <span>Bass</span><span class="dot">✦</span><span>Beach</span><span class="dot">✦</span><span>Beds</span><span class="dot">✦</span><span>Free Entry</span><span class="dot">✦</span><span>One Winner</span><span class="dot">✦</span><span>All In</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ================= FOOT ================= -->
+<footer class="foot">
+  <img class="mm" src="photos/logo-black.png" alt="Mad Monkey">
+  <p class="fine">Entries open Friday 4PM and close Wednesday 12PM (Bali time). One winner is drawn at random from all valid entries and hit up on WhatsApp and email. Prize: a 3-day DnB All Stars festival pass, a 4-night Mad Monkey stay, a daily festival shuttle and pre-party entry. Flights and personal spending not included. One entry per person. Follow <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels</a>.</p>
+  <p class="copy">© <span id="yr"></span> Mad Monkey Hostels · DnB All Stars Thailand Giveaway</p>
+</footer>
+
+<!-- ================= STICKY ================= -->
+<div class="sticky" id="stickyBar">
+  <span class="lbl"><b id="stickyLabel">Free to enter</b></span>
+  <button class="btn" data-open-enter>Count me in →</button>
+</div>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet">
+    <button class="x" id="closeModal" aria-label="Close">✕</button>
+
+    <div id="formView">
+      <p class="kicker">DnB All Stars Thailand 🔊</p>
+      <h2 class="anton" id="mTitle">Drop your details,<br>grab your spot</h2>
+      <p class="sub">Name, email, WhatsApp — that's your ticket in the draw. Ten seconds, tops.</p>
+
+      <div class="formbanner" id="banner"></div>
+
+      <form id="enterForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" autocomplete="name" required>
+          <span class="err" id="errName">Tell us your name.</span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="err" id="errEmail">We need a valid email to reach you.</span>
+        </div>
+        <div class="field">
+          <label for="whatsapp">WhatsApp number</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+66 81 234 5678" autocomplete="tel" inputmode="tel" required>
+          <span class="err" id="errWa">Add a WhatsApp number so we can reach you if you win.</span>
+          <span class="hint">Include your country code (e.g. +66). It's how we'll tell you if you've won.</span>
+        </div>
+        <button type="submit" class="btn submit" id="submitBtn">Let's go →</button>
+        <p class="micro">By entering you agree we can contact you about this giveaway and Mad Monkey offers. One entry per person. We never share your details.</p>
+      </form>
+    </div>
+
+    <div class="success" id="successView">
+      <p class="kicker" style="color:var(--cyan)">You're in 🎉</p>
+      <div class="anton">See you on the dancefloor.</div>
+      <p>Your entry's locked in. We draw one winner after entries close — if it's you, we'll hit you up on WhatsApp and email.</p>
+      <p>Follow so you don't miss it: <a href="https://www.instagram.com/madmonkeyhostels/" target="_blank" rel="noopener">@madmonkeyhostels →</a></p>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+/* =============== CONFIG =============== */
+const CONFIG = {
+  supabaseUrl:     "https://ksvzfkqmljqojwzauaim.supabase.co",
+  supabaseAnonKey: "sb_publishable_R0p5YyjVg4-NCRhOMjFLvg_IeiKR07C",
+  campaign:  "dnb-thailand-giveaway",
+  opensAt:   "2026-07-24T16:00:00+08:00",  // Fri 4:00 PM Bali (WITA)
+  closesAt:  "2026-07-29T12:00:00+08:00",  // Wed 12:00 PM Bali
+  instagram: "madmonkeyhostels",
+};
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+/* -------- equaliser bars -------- */
+const eq = document.getElementById('eq');
+const BARS = 56;
+for(let i=0;i<BARS;i++){
+  const b = document.createElement('i');
+  const dur = (0.5 + Math.random()*0.9).toFixed(2);
+  const delay = (-Math.random()*1.4).toFixed(2);
+  b.style.animationDuration = dur+'s';
+  b.style.animationDelay = delay+'s';
+  b.style.height = (34 + Math.random()*66)+'%';
+  eq.appendChild(b);
+}
+
+/* -------- countdown (open → close) -------- */
+const countEl = document.getElementById('count');
+const stickyLabel = document.getElementById('stickyLabel');
+const ctaSub = document.getElementById('ctaSub');
+const openTs  = new Date(CONFIG.opensAt).getTime();
+const closeTs = new Date(CONFIG.closesAt).getTime();
+
+function phase(){
+  const now = Date.now();
+  if(!isNaN(openTs) && now < openTs) return 'before';
+  if(!isNaN(closeTs) && now >= closeTs) return 'closed';
+  return 'live';
+}
+function renderCount(){
+  const now = Date.now(), p = phase();
+  if(p === 'closed'){
+    countEl.classList.add('done');
+    countEl.innerHTML = '<div class="u"><div class="l">Entries are now closed</div></div>';
+    stickyLabel.textContent = 'Entries are closed';
+    ctaSub.textContent = 'Follow @madmonkeyhostels for the next one';
+    return;
+  }
+  countEl.classList.remove('done');
+  const target = p === 'before' ? openTs : closeTs;
+  stickyLabel.textContent = p === 'before' ? 'Opens Fri 4PM' : 'Free to enter';
+  ctaSub.textContent = p === 'before' ? 'Goes live Friday 4PM (Bali) ⏳' : 'One winner takes the lot 🎉';
+  const diff = target - now;
+  const d = Math.floor(diff/86400000), h = Math.floor(diff%86400000/3600000),
+        m = Math.floor(diff%3600000/60000), s = Math.floor(diff%60000/1000);
+  const u=(n,l)=>`<div class="u"><div class="n">${String(n).padStart(2,'0')}</div><div class="l">${l}</div></div>`;
+  countEl.innerHTML = u(d,'Days')+u(h,'Hrs')+u(m,'Min')+u(s,'Sec');
+}
+renderCount(); setInterval(renderCount, 1000);
+
+/* -------- sticky bar after hero -------- */
+const bar = document.getElementById('stickyBar');
+new IntersectionObserver(([e])=>bar.classList.toggle('show', !e.isIntersecting),{threshold:0})
+  .observe(document.querySelector('.hero'));
+
+/* -------- confetti -------- */
+function confetti(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  const colors=['#ff2d9b','#22e0ff','#c6ff2e','#ffc21a','#8a5cff','#ff5a1f'];
+  const wrap=document.createElement('div'); wrap.className='confetti';
+  for(let i=0;i<90;i++){
+    const c=document.createElement('i');
+    c.style.left=Math.random()*100+'vw';
+    c.style.background=colors[i%colors.length];
+    c.style.animationDuration=(2.2+Math.random()*1.8)+'s';
+    c.style.animationDelay=(Math.random()*0.5)+'s';
+    c.style.transform=`translateY(0) rotate(${Math.random()*360}deg)`;
+    c.style.width=(6+Math.random()*6)+'px';
+    c.style.height=(10+Math.random()*8)+'px';
+    wrap.appendChild(c);
+  }
+  document.body.appendChild(wrap);
+  setTimeout(()=>wrap.remove(),4600);
+}
+
+/* -------- modal -------- */
+const modal = document.getElementById('modal');
+const openModal = ()=>{ modal.classList.add('open'); document.body.classList.add('modal-open');
+  setTimeout(()=>document.getElementById('fullName').focus(),50); };
+const closeModal = ()=>{ modal.classList.remove('open'); document.body.classList.remove('modal-open'); };
+document.querySelectorAll('[data-open-enter]').forEach(b=>b.addEventListener('click',openModal));
+document.getElementById('closeModal').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{ if(e.target===modal) closeModal(); });
+addEventListener('keydown',e=>{ if(e.key==='Escape' && modal.classList.contains('open')) closeModal(); });
+
+/* -------- supabase -------- */
+let supabase = null;
+try{
+  const { createClient } = await import('https://esm.sh/@supabase/supabase-js@2');
+  if(CONFIG.supabaseUrl && CONFIG.supabaseAnonKey && !CONFIG.supabaseUrl.includes('[')){
+    supabase = createClient(CONFIG.supabaseUrl, CONFIG.supabaseAnonKey);
+  }
+}catch(err){ console.error('Supabase failed to load', err); }
+
+/* -------- attribution -------- */
+const q = new URLSearchParams(location.search);
+const attribution = {
+  utm_source:q.get('utm_source'), utm_medium:q.get('utm_medium'),
+  utm_campaign:q.get('utm_campaign'), utm_content:q.get('utm_content'), utm_term:q.get('utm_term'),
+  source_country:q.get('country'),
+};
+
+/* -------- submit -------- */
+const form = document.getElementById('enterForm');
+const banner = document.getElementById('banner');
+const submitBtn = document.getElementById('submitBtn');
+const showErr=(id,on)=>document.getElementById(id).classList.toggle('show',on);
+const showBanner=(html)=>{ banner.innerHTML=html; banner.classList.add('show'); banner.scrollIntoView({block:'nearest'}); };
+const hideBanner=()=>banner.classList.remove('show');
+
+form.addEventListener('submit', async (e)=>{
+  e.preventDefault(); hideBanner();
+  const name = document.getElementById('fullName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const whatsapp = document.getElementById('whatsapp').value.trim();
+  const okName = name.length>=2;
+  const okEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const okWa = whatsapp.replace(/[^0-9]/g,'').length>=7;
+  showErr('errName',!okName); showErr('errEmail',!okEmail); showErr('errWa',!okWa);
+  if(!(okName&&okEmail&&okWa)) return;
+
+  const p = phase();
+  if(p === 'before'){
+    showBanner('The giveaway isn\'t live yet — it drops <b>Friday at 4PM (Bali time)</b>. Come back then, or follow <a href="https://www.instagram.com/'+CONFIG.instagram+'/" target="_blank" rel="noopener">@'+CONFIG.instagram+'</a> for the reminder.');
+    return;
+  }
+  if(p === 'closed'){
+    showBanner('Entries have closed — follow <a href="https://www.instagram.com/'+CONFIG.instagram+'/" target="_blank" rel="noopener">@'+CONFIG.instagram+'</a> for the next one.');
+    return;
+  }
+  if(!supabase){ showBanner(`We can't reach our system right now — your details are still here, give it another go in a moment.`); return; }
+
+  submitBtn.disabled=true; const orig=submitBtn.textContent; submitBtn.textContent='Sending…';
+  try{
+    const { error: insErr } = await supabase.from('competition_entries').insert({
+      full_name:name, email, whatsapp,
+      campaign:CONFIG.campaign, page_url:location.href, user_agent:navigator.userAgent,
+      ...attribution,
+    });
+    if(insErr) throw insErr;
+    document.getElementById('formView').style.display='none';
+    document.getElementById('successView').classList.add('show');
+    confetti();
+  }catch(err){
+    console.error('Entry save failed', err);
+    submitBtn.disabled=false; submitBtn.textContent=orig;
+    showBanner(`Something went wrong sending that — your details are still here, give it another go.`);
+  }
+});
+</script>
+</body>
+</html>
